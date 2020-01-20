@@ -9,5 +9,6 @@
   <license>MIT</license>
   <platform name="android">
     <framework src="multidex.gradle" custom="true" type="gradleReference"/>
+    <framework src="gradle.properties" custom="true" type="gradleReference"/>
   </platform>
 </plugin>
