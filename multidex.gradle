@@ -29,11 +29,17 @@ dependencies {
 apply plugin: com.google.gms.googleservices.GoogleServicesPlugin
 //apply plugin: com.crashlytics.tools.gradle.CrashlyticsPlugin
 
-//com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true
  
 configurations.all {
     resolutionStrategy {
-        //force "com.android.support:appcompat-v7:27.+"
-        //force "com.android.support:support-v4:27.+"
+        force "com.android.support:appcompat-v7:27.+"
+        force "com.android.support:support-v4:27.+"
+    }
+}
+
+android {
+    defaultConfig {
+        multiDexEnabled true
     }
 }
